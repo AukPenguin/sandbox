@@ -1,7 +1,17 @@
-body {
-    min-height: 100vh;
+:root {
+    --gradient: linear-gradient(115deg, blue -15%, red 40%, yellow 110%);
 
-    background: linear-gradient(115deg, blue -15%, red 50%, yellow 110%);
+    --font-large: 14pt;
+    --font-bold: bold;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+
+    margin: 0;
+    height: 100%;
+
+    background: linear-gradient(rgb(255, 255, 255, 0.4)), var(--gradient);
     
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,35 +27,80 @@ body {
 
 .page-container > .login-container {
     background-color: rgba(255, 255, 255, 0.2);
-    border: 2px solid white;
-    border-radius: 100px;
-    box-shadow: 0 0 45px 2px rgb(255, 255, 255);
-
-    width: max-content;
-    height: max-content;
-    padding: 225px 175px;
+    border: 3px solid white;
+    border-radius: 20px;
+    box-shadow: 0 0 30px 12px rgb(255, 255, 255);
 
     &:hover {
         background-color: rgba(255, 255, 255, 0.1);
-        box-shadow: 0 0 65px 2px rgb(255, 255, 255)
+        box-shadow: 0 0 40px 16px rgb(255, 255, 255)
     }
 }
 
 .page-container > .login-container > .form-title {
+    width: max-content;
+    margin: 40px auto 20px;
+
     .title {
-        margin: 0;
+        text-align: center;
+        
         font-size: 24pt;
         font-weight: bold;
+
+        color: white;
     }
 
     .title-bar {
-        padding: 5px;
-        background: linear-gradient(115deg, blue -15%, red 60%, yellow 110%);;
+        background: linear-gradient(rgb(255, 255, 255, 0.4)), var(--gradient);
+        height: 8px;
 
+        margin-top: 2px;
+
+        border-radius: 8px;
     }
 }
 
+.login-form > div > input, label {
+    display: block;
+}
 
+.login-form > div > label {
+    color: white;
+    margin: 0 65px;
+
+    font-size: var(--font-large);
+    font-weight: var(--font-bold);
+}
+
+.login-form > div > input {
+    margin: 0 65px 50px;
+    padding: 6px 14px;
+
+    font-size: var(--font-large);
+
+    border: none;
+    border-radius: 20px;
+
+
+}
+
+.login-container > .login-form > div > input:focus {
+    outline: none;
+}
+
+.login-container > .login-form > .submit-button {
+    width: max-content;
+    margin: 10px auto 50px;
+    padding: 15px 30px;
+
+    font-size: var(--font-large);
+    font-weight: var(--font-bold);
+
+    color: white;
+    background: linear-gradient(to right, #3ab7f1 0%, #0072ff 100%);
+
+    border-radius: 12px;
+}
 
 
 /* 
