@@ -1,0 +1,68 @@
+body {
+    min-height: 100vh;
+
+    background: linear-gradient(115deg, blue -15%, red 50%, yellow 110%);
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+
+    align-content: center;
+}
+
+.page-container {
+    display: flex;
+    justify-content: center;
+}
+
+.page-container > .login-container {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    border-radius: 100px;
+    box-shadow: 0 0 45px 2px rgb(255, 255, 255);
+
+    width: max-content;
+    height: max-content;
+    padding: 225px 175px;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 65px 2px rgb(255, 255, 255)
+    }
+}
+
+.page-container > .login-container > .form-title {
+    .title {
+        margin: 0;
+        font-size: 24pt;
+        font-weight: bold;
+    }
+
+    .title-bar {
+        padding: 5px;
+        background: linear-gradient(115deg, blue -15%, red 60%, yellow 110%);;
+
+    }
+}
+
+
+
+
+/* 
+form input:checked + label {
+    text-decoration: line-through;
+    color: #c0c0c0;
+}
+
+div:nth-child(even) {
+    width: max-content;
+    background-color: rgba(255, 0, 0, 0.282);
+}
+div:nth-child(odd) {
+    width: max-content;
+    background-color: rgba(0, 255, 0, 0.282);
+}
+div:nth-child(4n) {
+    width: max-content;
+    background-color: rgba(0, 0, 255, 0.282);
+} */
