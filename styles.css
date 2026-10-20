@@ -1,45 +1,68 @@
-
 body {
-    font-family: Helvetica, Arial, sans-serif;
+    margin: 40px;
+    background-color: blue;
+    height: 200vh;
 
-    margin: 0;
-    height: 100%;
-
-    background: radial-gradient(circle, black 15%, white 18%, transparent 28%), url(night-sky.png);
-    
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: fixed;
-
+    display: grid;
     align-content: center;
+    gap: 100px;
 }
 
-.page-container {
-    display: block;
-    justify-content: center;
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 8px;
+    height: 80vh;
+
+    text-align: center;
 }
 
+.second-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 8px;
+    height: 90vh;
 
-form {
-    color: #a0a0a0;
-    width: max-content;
-    margin: auto;
+    text-align: center;
+
+    
+    grid-template-areas: 
+        "box1 box2 box3 box3"
+        "box1 box5 box5 box4"
+        "box6 box5 box5 box7"
+        "box8 box8 box9 box7"
+    ;
 }
 
-form input:checked + label {
-    text-decoration: line-through;
-    color: #707070;
+.card {
+    display: grid;
+    grid-auto-flow: row;
+    grid-auto-rows: max-content 1fr 32px;
+    padding: 26px 28px 28px;
+    gap: 16px;
+    
+    overflow: auto;
+    overflow-wrap: anywhere;
+
+    border-radius: 24px;
+    background-color: whitesmoke;
+
+    button {
+        background-color: blueviolet;
+        border: none;
+        border-radius: 20px;
+        width: min(50%, 300px);
+        margin: 0 auto;
+        color: whitesmoke;
+
+        &:active {
+            transform: scale(0.93);
+            filter: brightness(0.88);
+    }
+    }
 }
 
-div:nth-child(even) {
-    width: max-content;
-    background-color: rgba(255, 0, 0, 0.282);
-}
-div:nth-child(odd) {
-    width: max-content;
-    background-color: rgba(0, 255, 0, 0.282);
-}
-div:nth-child(4n) {
-    width: max-content;
-    background-color: rgba(0, 0, 255, 0.282);
+h2{
+    margin: 0;
 }
